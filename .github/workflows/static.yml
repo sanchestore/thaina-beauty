@@ -1,43 +1,160 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thainá Mendes Beauty</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body { margin:0; font-family:'Poppins', sans-serif; background:#ffffff; color:#333; }
+header { background:linear-gradient(135deg,#ffe4ec,#f8cdda); padding:40px 20px; text-align:center; }
+header h1 { margin:0; color:#b85c7a; font-size:32px; }
+header p { margin-top:10px; }
+nav { margin-top:20px; }
+nav a { margin:0 10px; text-decoration:none; color:#444; font-weight:500; }
+section { padding:50px 20px; max-width:1100px; margin:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:#fff; padding:20px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
+.card h3 { color:#b85c7a; }
+button { background:#b85c7a; color:white; border:none; padding:12px 20px; border-radius:10px; cursor:pointer; font-weight:600; }
+button:hover { background:#9e4d67; }
+.highlight { background:#fff0f5; padding:30px; border-radius:20px; text-align:center; }
+.testimonial { font-style:italic; }
+.footer { background:#ffe4ec; text-align:center; padding:30px; margin-top:40px; }
+.badge { background:#b85c7a; color:white; padding:5px 10px; border-radius:20px; font-size:12px; }
+</style>
+</head>
+<body>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+<header>
+<h1>Thainá Mendes Beauty</h1>
+<p>Especialista em sobrancelhas e cílios • Transformando olhares há 6 anos</p>
+<nav>
+<a href="#servicos">Serviços</a>
+<a href="#resultados">Resultados</a>
+<a href="#agendamento">Agendar</a>
+<a href="#produtos">Produtos</a>
+</nav>
+</header>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+<section class="highlight">
+<h2>✨ Realce sua beleza com técnicas avançadas</h2>
+<p>Atendimento personalizado para resultados naturais e sofisticados</p>
+<button onclick="window.location.href='https://wa.me/5519981397668?text=Quero%20agendar%20um%20horário'">Agendar Agora</button>
+</section>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+<section id="servicos">
+<h2>Serviços</h2>
+<div class="grid">
+<div class="card">
+<span class="badge">Mais procurado</span>
+<h3>Alongamento de Cílios</h3>
+<p>Volume brasileiro e fio a fio para um olhar marcante e natural.</p>
+<button onclick="agendar('Alongamento de Cílios')">Agendar</button>
+</div>
+<div class="card">
+<h3>Brow Lamination</h3>
+<p>Sobrancelhas alinhadas, volumosas e com efeito moderno.</p>
+<button onclick="agendar('Brow Lamination')">Agendar</button>
+</div>
+<div class="card">
+<h3>Remoção de Estrias</h3>
+<p>Tratamento que estimula a regeneração da pele e suaviza estrias.</p>
+<button onclick="agendar('Remoção de Estrias')">Agendar</button>
+</div>
+</div>
+</section>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+<section style="background:linear-gradient(135deg,#fff0f5,#ffe4ec);padding:80px 20px;text-align:center;">
+<h2 style="font-size:42px;color:#b85c7a;">✨ Beleza, elegância e autoestima</h2>
+<p style="max-width:700px;margin:auto;font-size:18px;">Experiência premium em cílios, sobrancelhas e estética avançada em um ambiente sofisticado e acolhedor.</p>
+<br>
+<button onclick="window.location.href='https://wa.me/5519981397668'">Agendar Atendimento VIP</button>
+</section>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+<section id="instagram">
+<h2>Instagram Oficial</h2>
+<div class="card" style="text-align:center;">
+<h3>@thainambeauty</h3>
+<p>Veja resultados reais, transformações e novidades todos os dias.</p>
+<button onclick="window.location.href='https://instagram.com/thainambeauty'">Abrir Instagram</button>
+</div>
+</section>
+
+<section id="carrossel">
+<h2>✨ Resultados e Transformações</h2>
+<div style="display:flex;overflow-x:auto;gap:20px;padding:20px 0;">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600" width="300" style="border-radius:20px;">
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600" width="300" style="border-radius:20px;">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" width="300" style="border-radius:20px;">
+</div>
+</section>
+
+<section id="antesdepois">
+<h2>Antes e Depois</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600" width="100%" style="border-radius:15px;">
+<p>Resultado natural e sofisticado em alongamento de cílios.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=600" width="100%" style="border-radius:15px;">
+<p>Transformação completa com brow lamination.</p>
+</div>
+</div>
+</section>
+
+<section id="resultados">
+<h2>Resultados Reais</h2>
+<div class="grid">
+<div class="card testimonial">“Simplesmente perfeito, mudou meu olhar completamente!”</div>
+<div class="card testimonial">“Melhor profissional da região, super recomendo.”</div>
+<div class="card testimonial">“Resultado já na primeira sessão!”</div>
+</div>
+</section>
+
+<section id="produtos">
+<h2>Produtos</h2>
+<div class="grid">
+<div class="card">
+<h3>Sérum Crescimento Cílios</h3>
+<p>Fortalece e acelera o crescimento natural.</p>
+<button onclick="comprar('Sérum de Cílios')">Comprar</button>
+</div>
+<div class="card">
+<h3>Kit Sobrancelhas</h3>
+<p>Manutenção perfeita no dia a dia.</p>
+<button onclick="comprar('Kit Sobrancelhas')">Comprar</button>
+</div>
+</div>
+</section>
+
+<section id="agendamento" class="highlight">
+<h2>Últimos horários disponíveis</h2>
+<p>Garanta seu atendimento agora mesmo</p>
+<button onclick="window.location.href='https://wa.me/5519981397668'">Agendar pelo WhatsApp</button>
+</section>
+
+<section>
+<h2>Localização</h2>
+<p>Rua Dona Eugênia, 877 - São Dimas, Piracicaba - SP</p>
+<button onclick="window.location.href='https://maps.google.com/?q=Rua+Dona+Eugênia+877+Piracicaba'">Ver no mapa</button>
+</section>
+
+<div class="footer">
+<p>© 2026 Thainá Mendes Beauty • Todos os direitos reservados</p>
+</div>
+
+<script>
+function agendar(servico) {
+let msg = `Olá, quero agendar: ${servico}`;
+window.location.href = `https://wa.me/5519981397668?text=${encodeURIComponent(msg)}`;
+}
+function comprar(produto) {
+let msg = `Olá, quero comprar: ${produto}`;
+window.location.href = `https://wa.me/5519981397668?text=${encodeURIComponent(msg)}`;
+}
+</script>
+
+</body>
+</html>
